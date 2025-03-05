@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "types": [ "node", "webdriverio/async", "@wdio/globals/types", "@wdio/mocha-framework" ],
+        "module": "CommonJS"
+    },
+    "exclude": ["node_modules"]
+}
