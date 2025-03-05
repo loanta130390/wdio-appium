@@ -1,5 +1,4 @@
-import { $, $$, expect, driver } from "@wdio/globals";
-import report from '@wdio/allure-reporter';
+import { expect, driver } from "@wdio/globals";
 import homeScreen from '../objects/android/home.screen';
 import searchScreen from '../objects/android/search.screen';
 import tutorScreen from '../objects/android/tutor.screen';
@@ -23,7 +22,7 @@ describe('Android device - Search properties', async () => {
 
     it(`Expect the app tutor is randomly displayed in between while performing Search and close it`, async () => {
         await tutorScreen.tutorLayout.waitForDisplayed();
-        for (var i = 0; i < 200; i++) {
+        for (var i = 0; i < 400; i++) {
             await driver.pause(2000);
             await tutorScreen.closeBtn.click();
             const isTutorDisplayed = await tutorScreen.tutorLayout.isDisplayed();
